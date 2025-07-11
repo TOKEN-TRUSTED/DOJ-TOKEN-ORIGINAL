@@ -1,0 +1,12 @@
+{
+  "name": "DOJ COIN",
+  "symbol": "DOJ",
+  "type": "BEP20",
+  "decimals": 18,
+  "description": "DOJ COIN is a decentralized BEP-20 token on the BNB Smart Chain, designed for secure trading, liquidity control, and long-term growth.",
+  "website": "https://token-trusted.github.io/DOJ-TOKEN-ORIGINAL",
+  "explorer": "https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E",
+  "status": "active",
+  "id": "doj-coin",
+  "logo": "https://token-trusted.github.io/DOJ-TOKEN-ORIGINAL/doj-logo-256x256.png"
+}
