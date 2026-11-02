@@ -589,6 +589,7 @@
           }catch(error){
             if(error.code===4902){
               await eth.request({method:"wallet_addEthereumChain",params:[{chainId:CHAIN_ID,chainName:"BNB Smart Chain",nativeCurrency:{name:"BNB",symbol:"BNB",decimals:18},rpcUrls:["https://bsc-dataseed.binance.org/"],blockExplorerUrls:["https://bscscan.com/"]}]});
+              await eth.request({method:"wallet_switchEthereumChain",params:[{chainId:CHAIN_ID}]});
             }else{throw error;}
           }
         }
