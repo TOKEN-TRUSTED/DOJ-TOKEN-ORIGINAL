@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0c0e">
+<meta name="description" content="DOJ COIN whitepaper: a 24-month plan for a connected global jewellery commerce ecosystem, November 2026 to October 2028.">
+<link rel="icon" type="image/svg+xml" href="./doj-logo-32x32.svg">
+<title>DOJ COIN Whitepaper | Develop of Jewelry</title>
+<style>
+:root{--bg:#0b0c0e;--gold:#d8b875;--gold2:#f0d9a8;--text:#f4f0e8;--muted:#b0aa9d;--line:rgba(233,203,143,.16);--max:940px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 500px at 75% 0%,rgba(143,111,54,.13),transparent 65%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.8}
+a{color:var(--gold2);text-decoration-color:rgba(216,184,117,.45);text-underline-offset:3px;overflow-wrap:anywhere}
+.top{height:4px;background:linear-gradient(90deg,transparent,var(--gold),#f3e1b8,var(--gold),transparent)}
+header{position:sticky;top:0;z-index:5;background:rgba(11,12,14,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{max-width:var(--max);width:calc(100% - 36px);height:70px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;letter-spacing:.15em;font-family:Georgia,serif}.brand img{width:38px;height:38px}
+.nav a:not(.brand){font-size:11px;color:var(--muted);text-decoration:none;margin-left:17px}
+.paper{max-width:var(--max);width:calc(100% - 36px);margin:42px auto 90px}
+.cover{padding:48px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,rgba(216,184,117,.12),rgba(255,255,255,.02) 55%),#121416;position:relative;overflow:hidden}
+.cover:after{content:"";position:absolute;width:320px;height:320px;border:1px solid rgba(216,184,117,.18);border-radius:50%;right:-110px;top:-140px;box-shadow:0 0 0 35px rgba(216,184,117,.025),0 0 0 75px rgba(216,184,117,.015)}
+.cover img{width:68px;height:68px;border-radius:50%;position:relative;z-index:1}
+.eyebrow{font-size:10px;letter-spacing:.2em;color:var(--gold2);text-transform:uppercase;margin:24px 0 10px;position:relative;z-index:1}
+.cover h1{font:500 clamp(39px,7vw,65px)/1.08 Georgia,serif;letter-spacing:-.035em;margin:0 0 8px;position:relative;z-index:1}
+.cover h2{font:normal 22px Georgia,serif;color:var(--gold2);margin:0 0 20px;position:relative;z-index:1}
+.cover p{max-width:690px;color:var(--muted);font-size:14px;position:relative;z-index:1}
+.meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 25px;margin-top:29px;max-width:710px;position:relative;z-index:1}
+.meta div{border-top:1px solid var(--line);padding-top:9px}.meta small{display:block;color:#888276;font-size:9px;letter-spacing:.13em;text-transform:uppercase}.meta strong{font-size:12px;font-weight:600}
+.notice{margin:18px 0 35px;padding:17px 20px;border:1px solid rgba(216,184,117,.22);border-radius:14px;background:rgba(216,184,117,.045);font-size:12px;color:#d4cbbb}
+.content{padding:0 4px}.content h2{font:500 30px/1.2 Georgia,serif;color:var(--gold2);margin:56px 0 14px;letter-spacing:-.02em}.content h3{font:500 20px/1.35 Georgia,serif;color:#ebdfc8;margin:32px 0 10px}.content h4{font:700 13px/1.4 Arial,sans-serif;color:#e8d4ad;margin:23px 0 7px}
+.content p{font-size:13px;color:#c2bdb2;margin:0 0 15px}.content ul,.content ol{padding-left:23px;color:#c2bdb2;margin:0 0 18px}.content li{font-size:12px;padding:3px 0}
+.content strong{color:#f2e9d7}.content code{font-size:11px;color:var(--gold2);background:#202225;padding:3px 6px;border-radius:5px;overflow-wrap:anywhere}
+.content blockquote{border-left:2px solid var(--gold);padding:8px 18px;margin:22px 0;color:var(--muted);background:rgba(255,255,255,.02)}
+.content hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+footer{border-top:1px solid var(--line);padding:25px 18px 38px;text-align:center;color:#77736b;font-size:10px}
+@media(max-width:650px){.nav{height:62px}.nav a:not(.brand){margin-left:9px;font-size:10px}.paper{margin:20px auto 60px}.cover{padding:30px 23px}.meta{grid-template-columns:1fr}.content h2{font-size:26px}.content h3{font-size:18px}}
+@media print{body{background:#fff;color:#111}.top,header,footer{display:none}.paper{width:100%;margin:0}.cover,.notice{background:#fff;color:#222}.content p,.content li{color:#222}}
+</style>
+</head>
+<body>
+<div class="top"></div>
+<header><div class="nav"><a class="brand" href="./index.html"><img src="./doj-logo-256x256.png" alt="">DOJ COIN</a><nav><a href="./index.html">Home</a><a href="#roadmap">Roadmap</a><a href="#references">References</a></nav></div></header>
+<main class="paper">
+<section class="cover">
+<img src="./doj-logo-256x256.png" alt="DOJ COIN logo">
+<div class="eyebrow">Official project document · Draft 1.0</div>
+<h1>DOJ COIN</h1><h2>Develop of Jewelry</h2>
+<p>A strategic and technical plan for a connected global jewellery commerce ecosystem - linking trusted product information, digital marketplace workflows and compliant international payment options.</p>
+<div class="meta">
+<div><small>Publication date</small><strong>2 November 2026</strong></div>
+<div><small>Development horizon</small><strong>November 2026 - October 2028</strong></div>
+<div><small>Target public release</small><strong>First half of 2028, subject to readiness</strong></div>
+<div><small>Network / standard</small><strong>BNB Smart Chain / BEP-20</strong></div>
+<div><small>Token symbol</small><strong>DOJ</strong></div>
+<div><small>Contract address</small><strong>0x2815978C...FFc6097E</strong></div>
+</div>
+</section>
+<div class="notice"><strong>Important notice:</strong> This is a strategic project draft, not a public-offer notice, prospectus, investment advice, legal opinion or regulatory filing. Proposed services and token utilities are not represented as live. The public-release target is conditional on legal, technical and operational readiness.</div>
+<article class="content">
+<h2>1. Important Notice and Document Status</h2>
+<p>This whitepaper describes the vision, design principles and proposed two-year development programme of DOJ COIN ("DOJ" or the "Project"). It is intended to explain the project's direction to prospective users, merchants, technology partners and other interested parties.</p>
+<p>The project identifies DOJ as a BEP-20 token on BNB Smart Chain. The existence of a token contract does not mean that a jewellery marketplace, product-verification network, payment service, custody service, escrow service or other ecosystem product is already operating. Those capabilities are planned concepts and remain subject to product development, partner availability, technical testing and applicable law.</p>
+<p>Nothing in this document is an offer to sell, or a solicitation to buy, any security, financial instrument, investment product or crypto-asset in any jurisdiction. It is not investment, legal, tax or financial advice. No representation is made that DOJ will increase in value, be liquid, be accepted by merchants, be listed on any particular exchange or provide a financial return. Digital assets are volatile and may lose all or a substantial part of their value.</p>
+<p>DOJ is not described as a stablecoin, deposit, e-money instrument, share, debt instrument, ownership interest in a company, claim over jewellery, title to precious metals or stones, or a right to redeem physical goods. Holding DOJ does not, by itself, give a holder ownership of or a claim against any physical item or merchant. No redemption, buyback, minimum value or guaranteed acceptance is promised.</p>
+<p>Any future public distribution, public sale, admission to trading, payment functionality or regulated service will require a separate legal and compliance assessment for each relevant jurisdiction. The project must identify the responsible legal entity and offeror, determine the legal classification of the token and services, prepare required disclosures and obtain any authorisations or registrations that may be required. The target public-release window is a planning objective, not a commitment to launch regardless of these conditions.</p>
+<p>The proposed allocation in Section 8 is illustrative. It is not a verified description of current wallet balances, circulating supply, completed transfers, vesting contracts, locked liquidity or on-chain distribution. It must be reconciled with the actual contract, supply and wallet records before being represented as final.</p>
+
+<h2>2. Executive Summary</h2>
+<p>DOJ COIN - Develop of Jewelry - is a digital-asset initiative built around a long-term ambition: to make international trade in jewellery and other valuable decorative goods more accessible, transparent and efficient through a connected digital ecosystem.</p>
+<p>The jewellery trade is international, but product discovery, authenticity checks, seller assessment, negotiation, payment and delivery can be fragmented across different systems. Product descriptions, certificates, seller credentials, shipping details and transaction records may be difficult to compare. Smaller merchants can also face barriers when reaching customers beyond their local markets.</p>
+<p>DOJ proposes to bring these activities into a more coherent digital experience. Planned components include merchant onboarding, structured product listings, product-information records, document and certificate references, marketplace discovery, order-management tools, customer support and integrations with appropriately authorised payment and logistics partners.</p>
+<p>The DOJ token is an existing BEP-20 digital asset on BNB Smart Chain. The project may evaluate specific token utilities that support ecosystem participation, such as optional fee benefits, loyalty programmes and selected merchant or community incentives. No such utility should be assumed to be live today. The token is not intended to be represented as a stable settlement currency or substitute for regulated payment infrastructure.</p>
+<p>The programme covers 24 months, from November 2026 through October 2028. The target is to prepare for a controlled public release during the first half of 2028, followed by measured expansion through October 2028. A public release will proceed only if applicable legal, security, product, payment-partner and operational readiness gates are met.</p>
+
+<h2>3. Vision, Mission and Principles</h2>
+<h3>Vision</h3><p>A trusted, digitally connected global environment in which jewellery makers, merchants, collectors and buyers can discover valuable products, understand the information available about them and complete transactions through clear, dependable workflows.</p>
+<h3>Mission</h3><p>To develop practical digital infrastructure for jewellery and valuable decorative-goods commerce by connecting product information, merchant tools, customer discovery, transaction management and compliant payment options.</p>
+<h3>Core principles</h3>
+<ul>
+<li><strong>Trust through evidence:</strong> product and seller claims should be accompanied by traceable documents or independent verification where available. A digital record must not be presented as proof of a fact that has not been checked.</li>
+<li><strong>Clarity over hype:</strong> distinguish live functionality from concepts, targets and future plans.</li>
+<li><strong>Interoperability:</strong> work with established industry terminology, independent laboratories, payment providers and logistics services.</li>
+<li><strong>Security and privacy by design:</strong> protect sensitive identity, commercial and payment information.</li>
+<li><strong>Global ambition, local compliance:</strong> introduce services market by market according to local law and partner capability.</li>
+<li><strong>Practical utility:</strong> technology and token features should solve real problems for merchants and customers.</li>
+</ul>
+
+<h2>4. The Problem and Opportunity</h2>
+<h3>Fragmented product information</h3><p>A jewellery item can involve different materials, treatments, components, makers, suppliers and certificates. A photograph or seller description alone cannot establish provenance, material composition, gemstone identity, treatment, ownership or valuation.</p>
+<h3>Uneven access to trusted sellers</h3><p>Independent makers and specialist merchants may have strong products but limited international visibility. Buyers may struggle to compare sellers, understand policies, evaluate documentation and obtain support across borders.</p>
+<h3>Cross-border transaction friction</h3><p>International commerce can involve multiple currencies, intermediaries, fee schedules, settlement windows, foreign-exchange conversion, customs requirements, delivery risk and refund procedures. The Financial Stability Board identifies cost, speed, access and transparency as persistent challenges in cross-border payments. DOJ therefore treats payment integration as a core workstream, while recognising that payment services must be delivered through legally permitted providers.</p>
+<h3>Trust and responsible sourcing</h3><p>Precious metals and stones can carry provenance, supply-chain, sanctions, fraud and responsible-sourcing risks. DOJ intends to use established industry references and risk-based due-diligence processes where relevant. Blockchain alone cannot make a product authentic, responsibly sourced or conflict-free.</p>
+
+<h2>5. The Proposed DOJ Ecosystem</h2>
+<h3>Merchant onboarding and business profiles</h3><p>A future marketplace is expected to support merchant registration, business profiles, product categories, store policies, service areas and contact workflows. Depending on jurisdiction and service scope, merchants may be subject to identity and business verification, sanctions screening, beneficial-ownership checks, fraud controls and ongoing account review.</p>
+<h3>Digital product records</h3><p>Each listed item may have a structured record containing an item identifier and category; maker, brand or merchant information; declared material, metal fineness, weight and dimensions; gemstone or pearl descriptions and treatment disclosures when known; certificate issuer, number and reference; photographs and condition information; documented origin or chain-of-custody events where evidence exists; and listing, availability, shipping, warranty and return terms.</p>
+<p>Records should distinguish seller-declared data, uploaded evidence, third-party verified data and information that has not been independently checked. A certificate reference should not be described as a DOJ certification unless the project has actually performed and is authorised to perform that certification.</p>
+<h3>Marketplace and transaction workflow</h3><p>The proposed marketplace may allow a customer to search products, review seller profiles, request information, compare listings, submit an order, receive updates and contact support. Later versions may support merchant dashboards, inventory tools, quotations, wholesale enquiries and repeat-customer functions.</p>
+<p>An initial product should avoid unnecessary custody of customer funds. Where escrow, payment collection, refunds or custody are required, DOJ should use an appropriately authorised provider or a structure approved by local counsel. Clear order terms, cancellation windows, delivery milestones, dispute handling and refund responsibilities should be shown before purchase confirmation.</p>
+<h3>Phased product scope</h3><p>Initial scope is expected to prioritise finished jewellery and selected precious-metal or gemstone items. Expansion to pearls, watches, collectible objects and other valuable decorative goods should occur only when suitable taxonomies, verification partners, insurance, logistics and compliance controls exist.</p>
+<h3>Merchant and service-provider network</h3><p>The ecosystem may connect merchants with independent gemmological laboratories, precious-metal assayers, responsible-sourcing specialists, logistics and insurance providers, payment providers and customer-support partners. No partnership is implied unless separately announced and documented.</p>
+
+<h2>6. Trust, Verification and Product Provenance</h2>
+<p>Trust is a process, not a badge. The proposed framework will be based on the quality and provenance of evidence associated with a product and its seller.</p>
+<ul>
+<li><strong>Seller-declared:</strong> entered by the merchant and not independently confirmed.</li>
+<li><strong>Document-supported:</strong> accompanied by a document whose issuer and basic validity have been checked where feasible.</li>
+<li><strong>Third-party assessed:</strong> assessed by an identified independent laboratory, assayer or competent provider within its stated scope.</li>
+<li><strong>Traceability event:</strong> a recorded custody or processing event supported by an identified participant or document.</li>
+<li><strong>Unverified or incomplete:</strong> information for which sufficient evidence is not available.</li>
+</ul>
+<p>Relevant design references include CIBJO's Blue Books for industry terminology and classification; the Responsible Jewellery Council's Code of Practices and Chain of Custody standards; and the OECD Due Diligence Guidance for responsible mineral supply chains. These are design inputs, not certifications of DOJ or its merchants. DOJ will not claim compliance, certification or endorsement unless an independent assessment confirms it and the claim is authorised.</p>
+<p>Blockchain may selectively anchor hashes, timestamps, identifiers or public attestations. Primary documents and personal information should normally remain in secure controlled storage. A hash can help show that a file has not changed since a recorded point in time; it cannot prove that the original file was true, complete or honestly issued.</p>
+<p>Records should support corrections, version history and dispute flags. A disputed or withdrawn certificate should not silently disappear. The platform should provide a route to report errors or suspected fraud, with review and escalation procedures.</p>
+
+<h2>7. International Payments and Settlement</h2>
+<p>A core ambition is to make international jewellery purchases easier to complete. DOJ's approach is to integrate suitable payment options rather than assume one token or one blockchain can serve every customer, jurisdiction and transaction type.</p>
+<h3>Payment design objectives</h3>
+<ul><li>Disclose the transaction currency and any conversion rate.</li><li>Show item price, taxes, shipping and other charges.</li><li>Disclose provider and network fees where known.</li><li>Explain expected settlement or delivery milestones.</li><li>Display refund, cancellation and dispute terms before confirmation.</li><li>Provide payment status and transaction references.</li></ul>
+<h3>Provider-led payment infrastructure</h3><p>Fiat payments, card acceptance, bank transfers, foreign exchange, remittance and regulated custody should be handled by authorised financial institutions or payment providers where required. Availability depends on the corridor, merchant and customer location, transaction purpose and provider policy.</p>
+<p>Digital-asset payment options may be evaluated only where legally permitted and where suitable providers, sanctions controls, wallet screening, transaction monitoring, consumer disclosures and refund procedures are in place. DOJ itself is not a stablecoin and does not promise a fixed exchange rate, immediate settlement, redemption at par or acceptance by every seller.</p>
+<h3>Risk controls</h3><p>Integrations should include appropriate identity checks, transaction monitoring, sanctions screening, fraud detection, chargeback and refund procedures, suspicious-activity escalation and record retention. Exact controls will be determined with providers and qualified advisers for each market.</p>
+
+<h2>8. DOJ Token: Role and Proposed Tokenomics</h2>
+<h3>Existing token reference</h3>
+<ul><li><strong>Name:</strong> DOJ COIN</li><li><strong>Symbol:</strong> DOJ</li><li><strong>Network:</strong> BNB Smart Chain</li><li><strong>Standard:</strong> BEP-20</li><li><strong>Decimals recorded in project materials:</strong> 18, to be re-confirmed directly against the deployed contract before final offer documentation</li><li><strong>Contract:</strong> <code>0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E</code></li></ul>
+<p>Always check the contract independently on BscScan before interacting. This whitepaper is not a smart-contract audit or security certification.</p>
+<h3>Possible future utility - subject to approval</h3>
+<p>The project may evaluate optional fee benefits for merchants or customers; rewards or loyalty incentives for qualifying activity; merchant campaigns and community programmes; access to selected optional platform features; and future participation mechanisms if a transparent and legally appropriate governance model is established. These are potential product directions, not current rights or active utilities. No user should acquire DOJ on the assumption that any feature will be delivered.</p>
+<p>Each utility must have a genuine operational purpose, clear eligibility and rules, anti-abuse controls and a documented cost model. DOJ should not be mandatory for jewellery purchases unless a separate legal and commercial assessment supports that design.</p>
+<h3>Illustrative allocation framework</h3>
+<p>The following is a proposed planning allocation totalling 100%. It is not confirmed on-chain allocation and does not establish that tokens have been assigned, locked, vested or transferred. Before public distribution, publish verified total supply, wallet addresses, circulating amount, vesting schedule, unlock events and treasury or liquidity controls.</p>
+<ul>
+<li><strong>25% - Ecosystem and platform development:</strong> product engineering, marketplace modules, verification integrations, infrastructure and support.</li>
+<li><strong>20% - Liquidity and market operations:</strong> transparent market-access operations deployed in disclosed tranches; not a promise of price support or guaranteed liquidity.</li>
+<li><strong>20% - Community and adoption:</strong> documented user and merchant programmes, rewards and education, with anti-sybil and abuse controls.</li>
+<li><strong>15% - Strategic partnerships:</strong> milestone-based integrations, commercial pilots and specialist provider collaboration.</li>
+<li><strong>10% - Treasury and operational reserve:</strong> controlled contingency and operating resources, ideally subject to multi-approval controls and periodic reporting.</li>
+<li><strong>10% - Team and contributors:</strong> proposed 12-month cliff followed by 24-month linear vesting, subject to contract capability, actual allocation and legal approval.</li>
+</ul>
+<p>No shareholder, creditor, dividend, profit-sharing, ownership, redemption or guaranteed governance right is created by this document. Any rights attached to DOJ must be determined by the deployed contract, definitive legal documents and applicable law.</p>
+
+<h2>9. Technology and Security Architecture</h2>
+<p>The platform is expected to use a modular architecture in which the customer interface, marketplace services, product records, payment integrations and blockchain components can evolve independently.</p>
+<ul>
+<li><strong>Application layer:</strong> responsive customer and merchant interfaces, role-based views and protected administrative access.</li>
+<li><strong>Data and integration layer:</strong> secured product, merchant, order and support records; APIs for laboratories, payment providers and logistics partners; clear data ownership and incident obligations.</li>
+<li><strong>Blockchain layer:</strong> the existing DOJ token is on BNB Smart Chain. Any future contracts for rewards, permissions or other features must be specified, tested and independently reviewed. Avoid changing the existing token contract without documented security and legal assessment.</li>
+<li><strong>Security controls:</strong> threat modelling; secure development; independent reviews; dependency management; role-based access and MFA; multi-signature controls for sensitive actions where suitable; encryption; monitored backups; incident response; vulnerability disclosure; and account-compromise procedures.</li>
+</ul>
+<p>A security audit is a point-in-time assessment, not a guarantee that software is free of vulnerabilities.</p>
+
+<h2>10. Operating Model and Governance</h2>
+<p>Before any public token offering or operation of regulated services, the project should identify the responsible legal entity, jurisdiction, responsible persons, service providers and the party legally responsible for each public statement and customer obligation.</p>
+<p>Decision rights should be defined for product development, treasury management, merchant admission, verification claims, incident response, customer disputes and public communications. Treasury decisions should be recorded and, where possible, subject to dual approval or multi-signature controls. Material movements and token allocations should be disclosed under a published policy.</p>
+<p>The project does not currently claim that a DAO, token-holder voting system, formal board or legally incorporated operating entity has been established. Such arrangements must be documented before being presented as active governance.</p>
+
+<h2>11. Legal, Regulatory and Responsible-Commerce Framework</h2>
+<p>The ecosystem may touch crypto-asset distribution, exchange or transfer services, payment processing, custody, escrow, consumer sales, precious-metal and gemstone dealing, import/export, sanctions and personal-data processing. Analysis must be based on actual services, counterparties and jurisdictions, not only on the token's technical label.</p>
+<h3>Crypto-asset distribution and public launch</h3><p>Before a public offer or admission to trading, obtain jurisdiction-specific advice on token classification, offeror identity, disclosure, marketing, platform rules, consumer protections, financial promotions, licensing and notification or publication requirements. In the European Union, MiCA establishes disclosure and publication requirements for relevant crypto-asset white papers and additional rules depending on token category and activity. A website whitepaper draft is not evidence of MiCA compliance or regulatory approval.</p>
+<h3>Precious-goods trade and due diligence</h3><p>Develop risk-based merchant and transaction controls proportionate to product categories, values, jurisdictions and risk indicators. Controls may include customer and business due diligence, beneficial-owner checks, sanctions screening, source-of-funds enquiries, enhanced review, record keeping and suspicious-activity escalation. FATF recommendations and its dealer guidance are relevant references, but national law determines obligations for each operator.</p>
+<h3>Responsible sourcing and product claims</h3><p>Distinguish provenance data, chain-of-custody documentation, independent testing, ethical-sourcing assessments and marketing claims. Do not label a product conflict-free, ethically sourced, certified or fully traceable unless the scope and evidence justify the exact claim.</p>
+<h3>Privacy and consumer protection</h3><p>Collect personal data only for defined purposes, protect it and retain it only as justified. Customer terms should explain seller identity, product representations, delivery, customs duties, returns, warranties, disputes, refunds and complaint routes. Consumer rights cannot be waived merely by using a blockchain wallet or smart contract.</p>
+
+<h2>12. Potential Business Model</h2>
+<p>Subject to market validation, legal review and actual launch, potential revenue sources may include marketplace transaction or service fees; optional subscriptions or tools for professional merchants; paid verification or document-management services by qualified third parties or clearly scoped platform services; enterprise integrations and catalogue-management tools; and referral or integration fees where permitted and disclosed.</p>
+<p>No revenue, merchant contract, customer base or commercial partnership is asserted as existing unless separately published with verifiable evidence. Fees should align with real services and should not depend on promises of token-price appreciation.</p>
+
+<h2 id="roadmap">13. Twenty-Four-Month Roadmap</h2>
+<p>The plan runs from <strong>November 2026 to October 2028</strong>. The target public-release window is <strong>the first half of 2028</strong>. Dates are planning windows and may move if legal, security, partner or operational gates are not met.</p>
+<h3>Phase I - Discovery, foundations and legal design (November 2026 - April 2027)</h3>
+<ul><li>Confirm product scope, priority jewellery categories and target customer segments.</li><li>Interview merchants, buyers and specialists to validate transaction problems.</li><li>Map priority markets and legal restrictions for target services.</li><li>Identify the responsible entity and obtain an initial token and business-model classification assessment.</li><li>Design merchant onboarding, product data fields, certificate references and evidence labels.</li><li>Define privacy, cybersecurity, AML/KYC/KYB and consumer-protection requirements.</li><li>Review the existing token contract, supply records, permissions and security posture.</li></ul>
+<p><strong>Exit gate:</strong> validated product specification, legal work plan, verified token facts and approved technical architecture.</p>
+<h3>Phase II - Core platform and controlled pilot (May 2027 - October 2027)</h3>
+<ul><li>Build the first marketplace and merchant-management prototype.</li><li>Implement structured listings and product-record workflows.</li><li>Establish seller verification and evidence-classification processes.</li><li>Implement order states, customer support and dispute workflows.</li><li>Integrate payment-provider sandboxes and logistics test interfaces.</li><li>Test with a limited group of invited merchants and users.</li><li>Measure listing quality, user comprehension, operational workload and transaction failures.</li></ul>
+<p><strong>Exit gate:</strong> stable pilot product, documented onboarding, test results, security remediation plan and a decision on services that can lawfully be offered in initial markets.</p>
+<h3>Phase III - Public-release readiness and target launch (November 2027 - June 2028)</h3>
+<ul><li>Complete independent security reviews of the application and relevant smart contracts.</li><li>Finalise provider agreements and payment, refund and dispute operations.</li><li>Confirm token classification, offeror identity, distribution mechanics and market restrictions with qualified counsel.</li><li>Publish final token supply, wallet and allocation disclosures after on-chain reconciliation.</li><li>Prepare jurisdiction-specific terms, privacy notices, risk warnings and customer support procedures.</li><li>Publish the final whitepaper and complete any required regulatory notifications before an applicable offer or trading admission.</li><li>Complete operational rehearsals and limited pre-launch tests.</li><li><strong>Target a controlled public release in H1 2028</strong>, initially limited to cleared jurisdictions, product categories and services.</li></ul>
+<p><strong>Public-launch gate:</strong> no public offer or regulated service should start solely because the target date has arrived. Legal clearance, required registrations or notifications, provider readiness, security sign-off and customer-protection processes must be complete.</p>
+<h3>Phase IV - Controlled expansion and operational maturity (July 2028 - October 2028)</h3>
+<ul><li>Improve onboarding, product-information quality and customer support using launch data.</li><li>Expand merchant participation and categories only where verification capacity exists.</li><li>Add integrations based on demonstrated user demand and partner readiness.</li><li>Publish operational, security and treasury disclosures as appropriate.</li><li>Review token utility and allocation policies against actual use and legal requirements.</li><li>Establish a post-launch product and compliance improvement cycle.</li></ul>
+<p><strong>Exit gate:</strong> measured operating model, published performance indicators, documented controls and a prioritised roadmap for the next cycle.</p>
+<h3>Launch-readiness indicators</h3><p>Measure verified active merchants, product-record completeness, successful order completion, settlement outcomes, refund and dispute rates, fraud reports, customer-support response times, security incidents and repeat usage. Set numerical targets after the controlled pilot establishes a credible baseline.</p>
+
+<h2>14. Principal Risks</h2>
+<ul>
+<li><strong>Execution:</strong> marketplace and related systems may take longer or cost more than expected.</li>
+<li><strong>Adoption:</strong> merchants and customers may not use the platform at sustainable scale.</li>
+<li><strong>Verification:</strong> documents may be forged, inaccurate, outdated or insufficient to establish authenticity or origin.</li>
+<li><strong>Regulatory:</strong> laws and licensing obligations vary and may change; services or token distribution may be delayed, restricted or prohibited in some markets.</li>
+<li><strong>Payment and partner:</strong> providers may decline corridors, suspend service or change terms.</li>
+<li><strong>Cybersecurity:</strong> contracts, websites, wallets, integrations or accounts may be compromised.</li>
+<li><strong>Token market:</strong> DOJ may have limited liquidity, volatile pricing or limited exchange access; holders may lose some or all value.</li>
+<li><strong>Operational and fraud:</strong> fake merchants, counterfeit goods, chargebacks, theft, shipping loss, customs disputes and social engineering may occur.</li>
+<li><strong>Privacy:</strong> personal, business or transaction data may be exposed or processed unlawfully.</li>
+<li><strong>Reputation:</strong> overstated product claims, inaccurate token disclosures or delayed milestones may damage trust.</li>
+</ul>
+<p>Users and merchants should assess these risks independently. No mitigation plan removes all risk.</p>
+
+<h2>15. What This Whitepaper Does Not Promise</h2>
+<p>This document does not promise that DOJ will be listed on an exchange, maintain a particular price, produce a return, be redeemable for goods, be accepted by all merchants or function as a payment currency. It does not claim that the marketplace, verification network, escrow service, payment gateway, custody service, logistics network or DAO is already live. It does not claim any allocation has been locked, any audit completed, any licence obtained or any partner appointed unless separately evidenced and announced.</p>
+<p>The roadmap is forward-looking. Actual scope, dates, features and availability may change. Material changes should be published with the date and nature of each revision.</p>
+
+<h2>16. Conclusion</h2>
+<p>DOJ's ambition is to build more than a token landing page. The long-term objective is a practical digital ecosystem connecting the people, information and services involved in global jewellery commerce: merchants, makers, buyers, independent verifiers, payment providers and logistics partners.</p>
+<p>Credibility will depend on disciplined delivery. Trust must be based on evidence; payments must use appropriate providers and controls; token utility must be real and legally reviewed; and public milestones must be reported accurately. The 24-month programme creates a path from product validation to a target public release in the first half of 2028 and controlled expansion through October 2028.</p>
+
+<h2 id="references">17. References and Design Sources</h2>
+<p>These public resources inform the compliance and industry-design approach. They are not endorsements of DOJ and are not evidence that the project is certified or compliant.</p>
+<ol>
+<li><strong>Financial Stability Board (FSB), Cross-border Payments.</strong> Cost, speed, access and transparency challenges and the G20 roadmap. <a href="https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/cross-border-payments/">FSB resource</a>.</li>
+<li><strong>FATF Recommendations, updated June 2026.</strong> International standards for AML/CFT and related controls. <a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html">FATF Recommendations</a>.</li>
+<li><strong>FATF, Guidance on the Risk-Based Approach for Dealers in Precious Metals and Stones.</strong> Industry-specific risk guidance; read with later FATF standards. <a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatfguidanceontherisk-basedapproachfordealersinpreciousmetalsandstones.html">FATF guidance</a>.</li>
+<li><strong>CIBJO, The Blue Books.</strong> Terminology and classification references for diamonds, coloured gemstones, pearls, precious metals and laboratories. <a href="https://cibjo.org/the-blue-books/">CIBJO Blue Books</a>.</li>
+<li><strong>Responsible Jewellery Council.</strong> Code of Practices and Chain of Custody references. <a href="https://www.responsiblejewellery.com/standards/code-of-practices/">Code of Practices</a> · <a href="https://www.responsiblejewellery.com/standards/chain-of-custody/">Chain of Custody</a>.</li>
+<li><strong>OECD, Due Diligence Guidance for Responsible Supply Chains of Minerals from Conflict-Affected and High-Risk Areas (2016).</strong> <a href="https://www.oecd.org/en/publications/oecd-due-diligence-guidance-for-responsible-supply-chains-of-minerals-from-conflict-affected-and-high-risk-areas_9789264252479-en.html">OECD publication</a>.</li>
+<li><strong>Regulation (EU) 2023/1114 (MiCA), including Article 6.</strong> Crypto-asset white-paper content and related requirements. <a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj/eng">EUR-Lex</a>.</li>
+<li><strong>ESMA MiCA Interactive Single Rulebook, Article 5.</strong> Requirements for relevant crypto-assets seeking admission to trading in the EU. <a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-5-admission-trading-crypto-assets">ESMA rulebook</a>.</li>
+</ol>
+
+<h2>Project Information</h2>
+<p><strong>Project:</strong> DOJ COIN - Develop of Jewelry<br>
+<strong>Official website:</strong> <a href="https://token-trusted.github.io/DOJ-TOKEN-ORIGINAL/">token-trusted.github.io/DOJ-TOKEN-ORIGINAL</a><br>
+<strong>Contract explorer:</strong> <a href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E">BscScan</a><br>
+<strong>GitHub:</strong> <a href="https://github.com/TOKEN-TRUSTED/DOJ-TOKEN-ORIGINAL">Project repository</a><br>
+<strong>Telegram:</strong> <a href="https://t.me/dojcoin_official">dojcoin_official</a><br>
+<strong>Email:</strong> <a href="mailto:daryakenar.aus@gmail.com">daryakenar.aus@gmail.com</a></p>
+<p><strong>Document version:</strong> 1.0 Draft | 2 November 2026<br><strong>Planning horizon:</strong> November 2026 - October 2028</p>
+</article>
+</main>
+<footer>© 2026 DOJ COIN · <a href="mailto:daryakenar.aus@gmail.com">Project contact</a> · <a href="./index.html">Return to website</a></footer>
+</body></html>
