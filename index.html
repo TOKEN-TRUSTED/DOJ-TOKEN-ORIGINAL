@@ -207,7 +207,7 @@
           <p class="hero-copy">DOJ COIN — Develop of Jewelry — is a digital-asset initiative built around a bigger idea: making jewellery and other valuable decorative goods easier to discover, trade and settle across borders through a more connected digital ecosystem.</p>
           <div class="hero-actions">
             <a class="btn btn-gold" href="#token">Explore DOJ <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap <span aria-hidden="true">↗</span></a>
           </div>
           <p class="hero-note">BNB Smart Chain · BEP-20 token · Contract details available on BscScan</p>
         </div>
@@ -329,7 +329,7 @@
               <a class="chart-link" id="chartLink" href="https://dexscreener.com/bsc/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Check market data ↗</a>
             </div>
             <div class="trade-actions">
-              <a class="btn btn-gold" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy DOJ ↗</a>
+              <a class="btn btn-gold" href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy DOJ ↗</a>
               <a class="btn btn-outline" href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E&outputCurrency=BNB" target="_blank" rel="noopener noreferrer">Sell DOJ ↗</a>
             </div>
             <p class="trade-help" id="liquidityNote">Market data is being checked. A token contract alone does not create a tradable market; a live liquidity pool is required.</p>
@@ -423,7 +423,7 @@
         <a class="brand" href="#top"><img src="./doj-logo-256x256.png" alt=""><span><strong>DOJ COIN</strong><span>Develop of Jewelry</span></span></a>
         <div class="footer-links">
           <a href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">BscScan</a>
-          <a href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">PancakeSwap</a>
+          <a href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">PancakeSwap</a>
           <a href="https://t.me/dojcoin_official" target="_blank" rel="noopener noreferrer">Telegram</a>
           <a href="https://github.com/TOKEN-TRUSTED/DOJ-TOKEN-ORIGINAL" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="mailto:daryakenar.aus@gmail.com">Contact</a>
@@ -548,10 +548,10 @@
       }
       async function loadMarketData(){
         try{
-          const response=await fetch("https://api.dexscreener.com/latest/dex/tokens/"+CONTRACT);
+          const response=await fetch("https://api.dexscreener.com/token-pairs/v1/bsc/"+CONTRACT);
           if(!response.ok) throw new Error("Market API unavailable");
           const data=await response.json();
-          const pairs=(data.pairs||[]).filter(p=>p.chainId==="bsc" && p.baseToken && p.baseToken.address.toLowerCase()===CONTRACT.toLowerCase());
+          const pairs=(Array.isArray(data)?data:(data.pairs||[])).filter(p=>p.chainId==="bsc" && ((p.baseToken&&p.baseToken.address.toLowerCase()===CONTRACT.toLowerCase()) || (p.quoteToken&&p.quoteToken.address.toLowerCase()===CONTRACT.toLowerCase())));
           pairs.sort((a,b)=>Number((b.liquidity&&b.liquidity.usd)||0)-Number((a.liquidity&&a.liquidity.usd)||0));
           const pair=pairs[0];
           if(!pair){
@@ -564,11 +564,12 @@
             return;
           }
           setText("marketState","Market data available");
-          setText("tokenPrice",usd(pair.priceUsd));
+          const dojIsBase=pair.baseToken.address.toLowerCase()===CONTRACT.toLowerCase();
+          setText("tokenPrice",dojIsBase?usd(pair.priceUsd):"See DEX pair");
           setText("poolLiquidity",usdCompact(pair.liquidity&&pair.liquidity.usd));
           setText("volume24h",usdCompact(pair.volume&&pair.volume.h24));
           const change=Number(pair.priceChange&&pair.priceChange.h24);
-          setText("priceChange",Number.isFinite(change)?(change>0?"+":"")+change.toFixed(2)+"% (24h)":"Pair detected");
+          setText("priceChange",dojIsBase&&Number.isFinite(change)?(change>0?"+":"")+change.toFixed(2)+"% (24h)":"Pair detected");
           setText("liquidityNote","A market-data provider returned a BNB Chain pool for DOJ. Pool depth and prices can change quickly; check the live DEX screen before trading.");
           if(pair.url){
             $("chartLink").href=pair.url;
