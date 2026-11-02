@@ -1,10 +1,660 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=add-doj.html" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="add-doj.html">click here</a>.</p>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0e">
+  <meta name="description" content="DOJ COIN is the digital-asset initiative behind a vision for more connected, transparent and accessible global jewellery commerce.">
+  <meta property="og:title" content="DOJ COIN — Develop of Jewelry">
+  <meta property="og:description" content="A vision for a more connected global jewellery ecosystem.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://token-trusted.github.io/DOJ-TOKEN-ORIGINAL/doj-logo-256x256.png">
+  <link rel="icon" type="image/svg+xml" href="./doj-logo-32x32.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <title>DOJ COIN — Develop of Jewelry</title>
+  <style>
+    :root{--bg:#0b0c0e;--bg2:#111316;--panel:#15181b;--panel2:#1a1d20;--line:rgba(233,203,143,.16);--gold:#d8b875;--gold2:#f0d9a8;--gold3:#9b7840;--text:#f4f0e8;--muted:#a7a39a;--soft:#d4cbb9;--green:#8fc5a1;--red:#e69b8c;--radius:22px;--max:1160px;--shadow:0 24px 70px rgba(0,0,0,.28)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:radial-gradient(900px 540px at 80% 0%,rgba(143,111,54,.13),transparent 65%),radial-gradient(780px 460px at -10% 36%,rgba(74,91,91,.12),transparent 60%),var(--bg);color:var(--text);font-family:"DM Sans",Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin:0 auto}
+    .topline{height:3px;background:linear-gradient(90deg,transparent,var(--gold),#f3e1b8,var(--gold3),transparent)}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,12,14,.83);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.055)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:190px}
+    .brand img{width:43px;height:43px;object-fit:contain;border-radius:50%;box-shadow:0 0 24px rgba(216,184,117,.17)}
+    .brand strong{display:block;font-family:"Playfair Display",Georgia,serif;font-size:18px;letter-spacing:.13em;font-weight:600;line-height:1.2}
+    .brand span{display:block;color:var(--muted);font-size:9px;letter-spacing:.24em;text-transform:uppercase;margin-top:4px}
+    .navlinks{display:flex;align-items:center;gap:27px;color:#c7c1b5;font-size:12px}
+    .navlinks a{transition:color .2s}
+    .navlinks a:hover{color:var(--gold2)}
+    .navright{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:45px;padding:0 19px;border-radius:999px;border:1px solid transparent;font-size:12px;font-weight:700;letter-spacing:.035em;cursor:pointer;transition:transform .2s,background .2s,border-color .2s,color .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:linear-gradient(135deg,#f0d9a8,#c69c55);color:#17130c;box-shadow:0 8px 24px rgba(216,184,117,.13)}
+    .btn-outline{border-color:rgba(216,184,117,.4);background:rgba(216,184,117,.035);color:var(--gold2)}
+    .btn-quiet{border-color:rgba(255,255,255,.12);color:var(--text);background:rgba(255,255,255,.035)}
+    .btn-small{min-height:38px;padding:0 14px;font-size:11px}
+    .menu-toggle{display:none;background:none;color:var(--text);border:1px solid var(--line);border-radius:12px;width:42px;height:42px;font-size:20px}
+    .hero{position:relative;overflow:hidden;padding:86px 0 74px}
+    .hero:before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(216,184,117,.08);border-radius:50%;right:-120px;top:-205px;box-shadow:0 0 0 42px rgba(216,184,117,.018),0 0 0 90px rgba(216,184,117,.012);pointer-events:none}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold2);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+    .eyebrow:before{content:"";display:block;width:25px;height:1px;background:var(--gold)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:500}
+    h1{font-size:clamp(44px,6vw,76px);line-height:1.05;letter-spacing:-.035em;margin:20px 0 22px;max-width:690px}
+    h1 em{font-style:normal;color:var(--gold2)}
+    .hero-copy{max-width:570px;color:#c4c0b7;font-size:15px;line-height:1.9}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-note{margin-top:23px;color:#77766f;font-size:10px;letter-spacing:.045em}
+    .hero-art{min-height:420px;position:relative;display:grid;place-items:center}
+    .orb{width:min(390px,100%);aspect-ratio:1;border-radius:50%;position:relative;display:grid;place-items:center;background:radial-gradient(circle at 34% 28%,#48402f 0,#26231c 28%,#151719 61%,#0b0c0e 72%);border:1px solid rgba(235,207,154,.28);box-shadow:inset 0 0 65px rgba(231,193,119,.13),0 0 100px rgba(194,153,77,.12)}
+    .orb:before,.orb:after{content:"";position:absolute;inset:17px;border:1px solid rgba(240,217,168,.19);border-radius:50%}
+    .orb:after{inset:32px;border-style:dashed;border-color:rgba(240,217,168,.13);transform:rotate(-20deg)}
+    .orb-logo{width:43%;max-width:168px;border-radius:50%;box-shadow:0 18px 55px rgba(0,0,0,.42);z-index:2}
+    .orbit{position:absolute;inset:-20px;border:1px solid rgba(216,184,117,.17);border-radius:50%;transform:rotate(-26deg) scaleY(.46)}
+    .orbit.two{inset:20px;transform:rotate(54deg) scaleY(.42);border-color:rgba(216,184,117,.11)}
+    .spark{position:absolute;width:7px;height:7px;border-radius:50%;background:#f2dba8;box-shadow:0 0 17px 5px rgba(242,219,168,.28)}
+    .spark.one{top:12%;right:19%}.spark.two{bottom:17%;left:11%;width:5px;height:5px}.spark.three{top:32%;left:3%;width:4px;height:4px}
+    .orbit-label{position:absolute;right:-4px;bottom:48px;padding:13px 17px;border:1px solid var(--line);border-radius:14px;background:rgba(20,22,23,.86);backdrop-filter:blur(12px);box-shadow:var(--shadow)}
+    .orbit-label small{display:block;color:var(--muted);font-size:9px;letter-spacing:.17em;text-transform:uppercase}
+    .orbit-label strong{display:block;color:var(--gold2);font-family:"Playfair Display",serif;font-size:18px;font-weight:500;margin-top:2px}
+    .stats-band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.018)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);padding:23px 0}
+    .stat{padding:2px 24px;border-right:1px solid var(--line)}
+    .stat:first-child{padding-left:0}.stat:last-child{border:0}
+    .stat label{display:block;color:#868279;font-size:9px;text-transform:uppercase;letter-spacing:.17em;margin-bottom:6px}
+    .stat strong{font-size:14px;font-weight:600;color:#e8e1d3;overflow-wrap:anywhere}
+    .stat .live{color:var(--green)}
+    section{padding:100px 0}
+    .section-head{max-width:690px;margin-bottom:44px}
+    .section-head h2{font-size:clamp(34px,4.5vw,52px);line-height:1.13;margin:15px 0}
+    .section-head p{color:var(--muted);font-size:14px;line-height:1.9;margin:0}
+    .section-head.center{text-align:center;margin-left:auto;margin-right:auto}
+    .section-head.center .eyebrow{justify-content:center}
+    .section-head.center .eyebrow:after{content:"";display:block;width:25px;height:1px;background:var(--gold)}
+    .vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .vision-card{min-height:275px;padding:33px;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.013));position:relative;overflow:hidden}
+    .vision-card.featured{grid-column:span 2;min-height:235px;background:linear-gradient(115deg,rgba(216,184,117,.13),rgba(255,255,255,.025) 58%),#141619;display:flex;align-items:flex-end}
+    .vision-card.featured:after{content:"";position:absolute;width:270px;height:270px;border:1px solid rgba(216,184,117,.2);border-radius:50%;right:8%;top:-58px;box-shadow:0 0 0 30px rgba(216,184,117,.025),0 0 0 65px rgba(216,184,117,.018)}
+    .vision-card .card-index{color:var(--gold);font-size:10px;letter-spacing:.18em}
+    .vision-card h3{font-size:27px;margin:28px 0 10px}
+    .vision-card p{color:var(--muted);font-size:13px;line-height:1.85;max-width:470px;margin:0}
+    .vision-card.featured h3{font-size:33px;max-width:570px;margin-top:13px}
+    .vision-card.featured p{max-width:550px}
+    .vision-card.featured .featured-copy{position:relative;z-index:1}
+    .mini-tag{display:inline-flex;padding:6px 10px;border-radius:999px;border:1px solid rgba(216,184,117,.25);color:var(--gold2);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    .ecosystem{background:linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)}
+    .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .pillar{padding:27px 23px;border:1px solid rgba(255,255,255,.075);background:rgba(21,24,27,.82);border-radius:18px;min-height:238px;transition:border-color .2s,transform .2s}
+    .pillar:hover{border-color:rgba(216,184,117,.36);transform:translateY(-4px)}
+    .pillar-icon{width:43px;height:43px;border-radius:13px;background:rgba(216,184,117,.09);border:1px solid rgba(216,184,117,.16);display:grid;place-items:center;color:var(--gold2);font-size:19px}
+    .pillar h3{font-size:21px;margin:22px 0 8px}
+    .pillar p{color:var(--muted);font-size:12px;line-height:1.8;margin:0}
+    .development-note{margin-top:18px;color:#8d887e;font-size:11px;text-align:center}
+    .token-section{background:#101214;border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045)}
+    .token-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+    .surface{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#191c1f,#121416);padding:30px;box-shadow:var(--shadow)}
+    .token-heading{display:flex;align-items:center;gap:14px;margin-bottom:27px}
+    .token-heading img{width:55px;height:55px;border-radius:50%}
+    .token-heading h3{font-size:26px;margin:0}
+    .token-heading p{color:var(--muted);font-size:11px;margin:1px 0 0}
+    .detail-list{display:grid;gap:0}
+    .detail{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.065);font-size:12px}
+    .detail:last-child{border:0}
+    .detail span{color:var(--muted)}
+    .detail strong{font-weight:600;text-align:right;max-width:72%;overflow-wrap:anywhere}
+    .contract-row{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+    .copy-btn{border:1px solid rgba(216,184,117,.28);background:rgba(216,184,117,.06);border-radius:8px;color:var(--gold2);font-size:10px;padding:6px 9px;cursor:pointer}
+    .chain-status{display:inline-flex;align-items:center;gap:7px;font-size:10px;color:var(--green)}
+    .chain-status:before{content:"";width:6px;height:6px;background:currentColor;border-radius:50%;box-shadow:0 0 12px currentColor}
+    .trade-panel{display:flex;flex-direction:column}
+    .trade-panel h3{font-size:29px;margin:4px 0 8px}
+    .trade-panel>p{color:var(--muted);font-size:12px;line-height:1.8;margin-bottom:23px}
+    .price-card{border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.065);padding:17px;margin-bottom:22px}
+    .price-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+    .price-top span{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+    .price-top strong{font-size:12px;color:var(--gold2)}
+    .market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .market-grid div{min-width:0}
+    .market-grid small{display:block;color:#868279;font-size:9px;margin-bottom:5px}
+    .market-grid b{font-size:13px;font-weight:600;overflow-wrap:anywhere}
+    .trade-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .trade-actions .btn{width:100%}
+    .trade-help{font-size:10px;color:#858177;margin-top:17px;line-height:1.7}
+    .wallet-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:22px}
+    .wallet-balance{font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+    .wallet-balance strong{color:var(--text)}
+    .chart-link{display:inline-flex;color:var(--gold2);font-size:10px;margin-top:13px;text-decoration:underline;text-decoration-color:rgba(216,184,117,.35);text-underline-offset:4px}
+    .tokenomics-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:38px;align-items:center}
+    .tokenomics-summary{padding:27px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.025)}
+    .tokenomics-summary h3{font-size:25px;margin:0 0 9px}
+    .tokenomics-summary p{font-size:12px;color:var(--muted);line-height:1.85;margin:0}
+    .draft-label{display:inline-block;margin-bottom:15px;padding:6px 9px;border-radius:5px;background:rgba(216,184,117,.11);color:var(--gold2);font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+    .allocation-list{display:grid;gap:15px}
+    .allocation{display:grid;grid-template-columns:1fr auto;gap:5px 16px;align-items:center}
+    .allocation-label{font-size:12px;color:#ded8cc}
+    .allocation-pct{font-family:"Playfair Display",serif;font-size:18px;color:var(--gold2)}
+    .bar{grid-column:1/-1;height:5px;background:#26282a;border-radius:99px;overflow:hidden}
+    .bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--gold3),var(--gold2));border-radius:99px}
+    .tokenomics-foot{margin-top:22px;color:#89847b;font-size:10px;line-height:1.75}
+    .roadmap{background:linear-gradient(180deg,rgba(255,255,255,.015),transparent)}
+    .roadmap-list{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .roadmap-item{position:relative;padding:24px 19px 22px;border:1px solid rgba(255,255,255,.075);background:rgba(21,24,27,.7);border-radius:17px;min-height:235px}
+    .roadmap-item .number{font-family:"Playfair Display",serif;font-size:27px;color:rgba(216,184,117,.6)}
+    .roadmap-item .state{display:inline-block;color:var(--gold2);font-size:8px;letter-spacing:.12em;text-transform:uppercase;padding:5px 7px;border:1px solid rgba(216,184,117,.2);border-radius:4px;margin-top:15px}
+    .roadmap-item h3{font-size:18px;margin:15px 0 8px}
+    .roadmap-item p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}
+    .community-box{padding:45px;border:1px solid rgba(216,184,117,.22);border-radius:24px;background:radial-gradient(500px 230px at 100% 0%,rgba(216,184,117,.12),transparent 70%),#151719;display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .community-box h2{font-size:clamp(30px,4vw,43px);margin:13px 0}
+    .community-box p{font-size:13px;color:var(--muted);max-width:570px;margin:0;line-height:1.85}
+    .community-actions{display:flex;flex-direction:column;gap:10px;min-width:185px}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    details{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);border-radius:14px;padding:18px 20px}
+    summary{cursor:pointer;color:#e9e1d2;font-size:12px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+    summary:after{content:"+";color:var(--gold2);font-size:17px;line-height:1}
+    details[open] summary:after{content:"−"}
+    details p{font-size:11px;color:var(--muted);line-height:1.8;margin:14px 0 0}
+    footer{border-top:1px solid var(--line);padding:36px 0 27px;background:rgba(0,0,0,.18)}
+    .footer-top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:25px}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap;color:#aaa59b;font-size:10px}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);color:#77746d;font-size:9px}
+    .disclaimer{max-width:690px;line-height:1.7}
+    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:100;background:#222522;border:1px solid rgba(216,184,117,.35);border-radius:12px;padding:12px 17px;color:#f3e9d2;font-size:12px;box-shadow:var(--shadow);transition:.25s}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .muted{color:var(--muted)}
+    @media(max-width:940px){.navlinks{gap:15px}.hero-grid{gap:22px}.pillar-grid{grid-template-columns:repeat(2,1fr)}.roadmap-list{grid-template-columns:repeat(3,1fr)}.roadmap-item{min-height:210px}.tokenomics-layout{gap:22px}}
+    @media(max-width:720px){.wrap{width:min(100% - 30px,var(--max))}.nav{height:68px}.brand{min-width:0}.brand img{width:38px;height:38px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;left:15px;right:15px;top:68px;padding:16px;background:#17191b;border:1px solid var(--line);border-radius:15px;flex-direction:column;align-items:stretch;gap:0;box-shadow:var(--shadow)}.navlinks.open{display:flex}.navlinks a{padding:11px 8px;border-bottom:1px solid rgba(255,255,255,.05)}.navlinks a:last-child{border:0}.navright .btn{display:none}.hero{padding:62px 0 54px}.hero-grid{grid-template-columns:1fr;gap:20px}.hero-art{min-height:310px;order:-1}.orb{width:285px}.orbit-label{right:0;bottom:27px}.hero-copy{font-size:13px}.hero-actions .btn{flex:1}.stats{grid-template-columns:1fr 1fr;row-gap:20px}.stat{padding:0 12px;border-right:0}.stat:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}.stat:nth-child(even){padding-right:0}.stats .stat:nth-child(3),.stats .stat:nth-child(4){padding-top:13px;border-top:1px solid var(--line)}section{padding:72px 0}.vision-grid{grid-template-columns:1fr}.vision-card.featured{grid-column:auto;min-height:265px}.vision-card{min-height:220px;padding:25px}.vision-card.featured:after{right:-95px}.pillar-grid{grid-template-columns:1fr 1fr}.pillar{padding:22px 17px;min-height:220px}.token-layout{grid-template-columns:1fr}.surface{padding:23px}.tokenomics-layout{grid-template-columns:1fr}.roadmap-list{grid-template-columns:1fr 1fr}.roadmap-item{min-height:210px}.community-box{padding:29px;display:block}.community-actions{margin-top:24px;flex-direction:row;flex-wrap:wrap}.faq-grid{grid-template-columns:1fr}.footer-top,.footer-bottom{align-items:flex-start;flex-direction:column}.footer-links{gap:13px}}
+    @media(max-width:420px){.brand strong{font-size:15px}.brand span{font-size:8px}.navright{gap:6px}.menu-toggle{width:38px;height:38px}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:0}.roadmap-list{grid-template-columns:1fr}.roadmap-item{min-height:0}.trade-actions{grid-template-columns:1fr}.market-grid{grid-template-columns:1fr 1fr;row-gap:13px}.community-actions{flex-direction:column}.community-actions .btn{width:100%}.detail{align-items:flex-start}.contract-row{flex-wrap:wrap;justify-content:flex-end}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="DOJ COIN home">
+        <img src="./doj-logo-256x256.png" alt="DOJ COIN logo">
+        <span><strong>DOJ COIN</strong><span>Develop of Jewelry</span></span>
+      </a>
+      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+        <a href="#vision">Vision</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#token">Token</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#community">Community</a>
+      </nav>
+      <div class="navright">
+        <button class="btn btn-outline btn-small" id="connectTop">Connect wallet</button>
+        <a class="btn btn-gold btn-small" href="#token">Explore DOJ <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">A digital vision for global jewellery commerce</div>
+          <h1>Connecting the world of <em>fine jewellery.</em></h1>
+          <p class="hero-copy">DOJ COIN — Develop of Jewelry — is a digital-asset initiative built around a bigger idea: making jewellery and other valuable decorative goods easier to discover, trade and settle across borders through a more connected digital ecosystem.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#token">Explore DOJ <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note">BNB Smart Chain · BEP-20 token · Contract details available on BscScan</p>
+        </div>
+        <div class="hero-art" aria-label="DOJ COIN brand artwork">
+          <div class="orb">
+            <div class="orbit"></div><div class="orbit two"></div>
+            <span class="spark one"></span><span class="spark two"></span><span class="spark three"></span>
+            <img class="orb-logo" src="./doj-logo-256x256.png" alt="DOJ">
+          </div>
+          <div class="orbit-label"><small>Project identity</small><strong>Trust · Access · Commerce</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-band">
+      <div class="wrap stats">
+        <div class="stat"><label>Network</label><strong>BNB Smart Chain</strong></div>
+        <div class="stat"><label>Token standard</label><strong>BEP-20</strong></div>
+        <div class="stat"><label>Contract read</label><strong id="contractState">Checking on-chain…</strong></div>
+        <div class="stat"><label>Market feed</label><strong id="marketState">Checking live data…</strong></div>
+      </div>
+    </div>
+
+    <section id="vision">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">The vision</div>
+          <h2>A more connected way to move value in jewellery.</h2>
+          <p>Jewellery commerce is global, but discovery, product information, trust and settlement can still be fragmented. DOJ’s long-term vision is to help bring these parts closer together through digital tools and accessible payment infrastructure.</p>
+        </div>
+        <div class="vision-grid">
+          <article class="vision-card featured">
+            <div class="featured-copy">
+              <span class="mini-tag">The long-term ambition</span>
+              <h3>From disconnected transactions to a connected jewellery ecosystem.</h3>
+              <p>Designed as a foundation for an online marketplace where buyers, sellers and service partners can connect with clearer information and more efficient digital settlement.</p>
+            </div>
+          </article>
+          <article class="vision-card">
+            <span class="card-index">01 / TRUST</span>
+            <h3>More informed discovery</h3>
+            <p>A future framework for presenting product details, seller information and provenance records in a clearer, more consistent way.</p>
+          </article>
+          <article class="vision-card">
+            <span class="card-index">02 / ACCESS</span>
+            <h3>Borderless participation</h3>
+            <p>A digital-first experience intended to make it easier for customers and merchants in different markets to find one another.</p>
+          </article>
+          <article class="vision-card">
+            <span class="card-index">03 / COMMERCE</span>
+            <h3>Online transactions</h3>
+            <p>A marketplace concept for jewellery and valuable decorative goods, with product discovery and transaction workflows designed for the digital world.</p>
+          </article>
+          <article class="vision-card">
+            <span class="card-index">04 / SETTLEMENT</span>
+            <h3>Efficient digital payments</h3>
+            <p>Exploring secure, transparent and practical payment flows for international commerce, subject to applicable laws and integrations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ecosystem" id="ecosystem">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="eyebrow">Ecosystem architecture</div>
+          <h2>Four pillars. One connected ambition.</h2>
+          <p>The following capabilities describe the project direction. They are roadmap concepts, not a claim that a live marketplace or payment network is already operating.</p>
+        </div>
+        <div class="pillar-grid">
+          <article class="pillar"><div class="pillar-icon">◇</div><h3>Verified information</h3><p>Product descriptions, seller profiles and provenance-related information designed to support more confident decisions.</p></article>
+          <article class="pillar"><div class="pillar-icon">⌕</div><h3>Global marketplace</h3><p>A digital environment envisioned to connect jewellery makers, merchants, collectors and buyers across regions.</p></article>
+          <article class="pillar"><div class="pillar-icon">◎</div><h3>Digital settlement</h3><p>Exploration of convenient payment rails and clear transaction records for cross-border purchases.</p></article>
+          <article class="pillar"><div class="pillar-icon">✧</div><h3>Partner network</h3><p>A future network of merchants, logistics providers, verification services and other ecosystem participants.</p></article>
+        </div>
+        <p class="development-note">Conceptual ecosystem pillars · Scope, partners and delivery milestones remain under development.</p>
+      </div>
+    </section>
+
+    <section class="token-section" id="token">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">The digital asset</div>
+          <h2>Meet DOJ COIN.</h2>
+          <p>DOJ is a BEP-20 token on BNB Smart Chain. Use the official contract address below when checking the token or opening a decentralised exchange. Always verify the address before trading.</p>
+        </div>
+        <div class="token-layout">
+          <div class="surface">
+            <div class="token-heading">
+              <img src="./doj-logo-256x256.png" alt="DOJ token logo">
+              <div><h3>DOJ COIN</h3><p>Develop of Jewelry · DOJ</p></div>
+            </div>
+            <div class="detail-list">
+              <div class="detail"><span>Network</span><strong>BNB Smart Chain (BSC)</strong></div>
+              <div class="detail"><span>Token standard</span><strong>BEP-20</strong></div>
+              <div class="detail"><span>Token name</span><strong id="tokenName">DOJ COIN</strong></div>
+              <div class="detail"><span>Symbol</span><strong id="tokenSymbol">DOJ</strong></div>
+              <div class="detail"><span>Decimals</span><strong id="tokenDecimals">18</strong></div>
+              <div class="detail"><span>Total supply</span><strong id="totalSupply">Reading from chain…</strong></div>
+              <div class="detail"><span>Contract address</span><strong class="contract-row"><span id="contractShort">0x2815…097E</span><button class="copy-btn" id="copyContract">Copy</button></strong></div>
+              <div class="detail"><span>On-chain status</span><strong class="chain-status" id="onchainStatus">Checking contract</strong></div>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:23px">
+              <a class="btn btn-outline btn-small" href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">View on BscScan ↗</a>
+              <button class="btn btn-quiet btn-small" id="addToken">Add DOJ to wallet</button>
+            </div>
+          </div>
+          <div class="surface trade-panel">
+            <div class="eyebrow">Trade access</div>
+            <h3>Access the market.</h3>
+            <p>Open the official PancakeSwap interface with the DOJ contract pre-filled. A successful swap also requires a supported liquidity pool, sufficient liquidity and a compatible wallet.</p>
+            <div class="price-card">
+              <div class="price-top"><span>Live market snapshot</span><strong id="priceChange">—</strong></div>
+              <div class="market-grid">
+                <div><small>DOJ price (USD)</small><b id="tokenPrice">Not available</b></div>
+                <div><small>Pool liquidity</small><b id="poolLiquidity">Not available</b></div>
+                <div><small>24h volume</small><b id="volume24h">Not available</b></div>
+              </div>
+              <a class="chart-link" id="chartLink" href="https://dexscreener.com/bsc/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Check market data ↗</a>
+            </div>
+            <div class="trade-actions">
+              <a class="btn btn-gold" href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy DOJ ↗</a>
+              <a class="btn btn-outline" href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E&outputCurrency=BNB" target="_blank" rel="noopener noreferrer">Sell DOJ ↗</a>
+            </div>
+            <p class="trade-help" id="liquidityNote">Market data is being checked. A token contract alone does not create a tradable market; a live liquidity pool is required.</p>
+            <div class="wallet-row">
+              <div class="wallet-balance" id="walletStatus">Wallet not connected</div>
+              <button class="btn btn-quiet btn-small" id="connectWallet">Connect wallet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tokenomics">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Tokenomics framework</div>
+          <h2>A proposed model for sustainable development.</h2>
+          <p>A transparent allocation framework can help explain how a token ecosystem could support product development, market access and adoption.</p>
+        </div>
+        <div class="tokenomics-layout">
+          <div class="tokenomics-summary">
+            <span class="draft-label">Illustrative proposal · Not confirmed</span>
+            <h3>Designed for long-term utility.</h3>
+            <p>This is an initial planning model prepared for discussion. It is not a statement of DOJ’s actual current balances, wallet allocations, circulating supply, vesting contracts or completed transfers. The final model must be reconciled with the deployed contract, actual token holdings and the project’s governance decisions before being presented as official.</p>
+          </div>
+          <div class="allocation-list">
+            <div class="allocation"><span class="allocation-label">Ecosystem & marketplace development</span><strong class="allocation-pct">25%</strong><div class="bar"><i style="--w:25%"></i></div></div>
+            <div class="allocation"><span class="allocation-label">Liquidity & market operations</span><strong class="allocation-pct">20%</strong><div class="bar"><i style="--w:20%"></i></div></div>
+            <div class="allocation"><span class="allocation-label">Community & adoption incentives</span><strong class="allocation-pct">20%</strong><div class="bar"><i style="--w:20%"></i></div></div>
+            <div class="allocation"><span class="allocation-label">Strategic partnerships</span><strong class="allocation-pct">15%</strong><div class="bar"><i style="--w:15%"></i></div></div>
+            <div class="allocation"><span class="allocation-label">Treasury & operational reserve</span><strong class="allocation-pct">10%</strong><div class="bar"><i style="--w:10%"></i></div></div>
+            <div class="allocation"><span class="allocation-label">Team & contributors (proposed vesting)</span><strong class="allocation-pct">10%</strong><div class="bar"><i style="--w:10%"></i></div></div>
+          </div>
+        </div>
+        <p class="tokenomics-foot">The percentages above are a suggested design exercise only. No vesting, lock-up, reserve or liquidity arrangement is represented as active or guaranteed.</p>
+      </div>
+    </section>
+
+    <section class="roadmap" id="roadmap">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Development path</div>
+          <h2>Building step by step.</h2>
+          <p>The roadmap is intentionally presented as phases rather than dated promises. Milestones and delivery dates will be updated as scope, resources and partners are confirmed.</p>
+        </div>
+        <div class="roadmap-list">
+          <article class="roadmap-item"><div class="number">01</div><span class="state">Foundation</span><h3>Token & identity</h3><p>DOJ COIN deployed on BNB Smart Chain, with project identity and an official contract reference published.</p></article>
+          <article class="roadmap-item"><div class="number">02</div><span class="state">Next focus</span><h3>Transparency layer</h3><p>Refine token documentation, publish confirmed supply and allocation details, and establish clear project communications.</p></article>
+          <article class="roadmap-item"><div class="number">03</div><span class="state">Planned</span><h3>Market readiness</h3><p>Evaluate liquidity, trading access, wallet support and market-data integrations with clear risk disclosures.</p></article>
+          <article class="roadmap-item"><div class="number">04</div><span class="state">In concept</span><h3>Marketplace prototype</h3><p>Explore a digital catalogue and transaction experience for jewellery merchants, buyers and service providers.</p></article>
+          <article class="roadmap-item"><div class="number">05</div><span class="state">Long-term vision</span><h3>Global integrations</h3><p>Explore verification, logistics and compliant cross-border payment partnerships as the ecosystem develops.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="community">
+      <div class="wrap">
+        <div class="community-box">
+          <div>
+            <div class="eyebrow">Stay connected</div>
+            <h2>Follow the development of DOJ.</h2>
+            <p>Follow official project updates, review the code repository, or contact the project team with questions and partnership enquiries.</p>
+          </div>
+          <div class="community-actions">
+            <a class="btn btn-gold" href="https://t.me/dojcoin_official" target="_blank" rel="noopener noreferrer">Join Telegram ↗</a>
+            <a class="btn btn-outline" href="https://github.com/TOKEN-TRUSTED/DOJ-TOKEN-ORIGINAL" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a>
+            <a class="btn btn-quiet" href="mailto:daryakenar.aus@gmail.com">Email the project ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Helpful information</div><h2>Frequently asked questions.</h2></div>
+        <div class="faq-grid">
+          <details><summary>What does DOJ stand for?</summary><p>DOJ stands for Develop of Jewelry, the project identity behind a long-term vision for a more connected jewellery and valuable decorative-goods ecosystem.</p></details>
+          <details><summary>Which blockchain does DOJ use?</summary><p>DOJ is identified as a BEP-20 token on BNB Smart Chain. You can check the official contract address on BscScan using the link on this page.</p></details>
+          <details><summary>Is the DOJ marketplace already live?</summary><p>No live marketplace is being represented by this website. The marketplace, verification and cross-border payment capabilities are part of the project vision and remain subject to development and partnerships.</p></details>
+          <details><summary>Can I buy or sell DOJ here?</summary><p>This website links to PancakeSwap with the official DOJ contract pre-filled. Actual swaps depend on pool availability, sufficient liquidity, wallet support and current DEX conditions. Always verify details before confirming a transaction.</p></details>
+          <details><summary>Is the tokenomics allocation final?</summary><p>No. The percentages shown are an illustrative draft only. They must be checked against actual token distribution and formally approved before being treated as official tokenomics.</p></details>
+          <details><summary>Does DOJ guarantee returns?</summary><p>No. DOJ makes no promise of price appreciation, income or investment returns. Digital assets can be volatile and you may lose some or all of the value you acquire.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="#top"><img src="./doj-logo-256x256.png" alt=""><span><strong>DOJ COIN</strong><span>Develop of Jewelry</span></span></a>
+        <div class="footer-links">
+          <a href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">BscScan</a>
+          <a href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">PancakeSwap</a>
+          <a href="https://t.me/dojcoin_official" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://github.com/TOKEN-TRUSTED/DOJ-TOKEN-ORIGINAL" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:daryakenar.aus@gmail.com">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> DOJ COIN. All rights reserved.</span>
+        <span class="disclaimer">DOJ is a digital asset and this website is informational only. Nothing here is financial, legal or investment advice, or an offer to sell securities. Future ecosystem features are subject to development, technical feasibility and applicable laws. Digital assets involve risk; do your own research.</span>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function(){
+      "use strict";
+      const CONTRACT = "0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E";
+      const SYMBOL = "DOJ";
+      const TOKEN_DECIMALS_FALLBACK = 18;
+      const CHAIN_ID = "0x38";
+      const RPCS = ["https://bsc-rpc.publicnode.com","https://bsc-dataseed.binance.org/","https://binance.llamarpc.com"];
+      const $ = id => document.getElementById(id);
+      let decimals = TOKEN_DECIMALS_FALLBACK;
+      let walletAccount = null;
+      let toastTimer = null;
+
+      function setText(id, value){ const el=$(id); if(el) el.textContent=value; }
+      function toast(message){
+        const el=$("toast"); el.textContent=message; el.classList.add("show");
+        clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove("show"),3200);
+      }
+      function shortAddress(address){ return address.slice(0,6)+"…"+address.slice(-4); }
+      function hexWord(value){ return value.toLowerCase().replace(/^0x/,"").padStart(64,"0"); }
+      function decodeAbiString(hex){
+        if(!hex || hex==="0x") return "";
+        const data=hex.slice(2);
+        try{
+          const offset=Number(BigInt("0x"+data.slice(0,64)))*2;
+          const length=Number(BigInt("0x"+data.slice(offset,offset+64)));
+          const bytes=data.slice(offset+64,offset+64+length*2);
+          const arr=new Uint8Array(bytes.match(/.{1,2}/g).map(x=>parseInt(x,16)));
+          return new TextDecoder().decode(arr);
+        }catch(e){
+          try{
+            const bytes=data.slice(0,64).match(/.{1,2}/g).map(x=>parseInt(x,16)).filter(x=>x!==0);
+            return new TextDecoder().decode(new Uint8Array(bytes));
+          }catch(err){ return ""; }
+        }
+      }
+      async function rpc(method,params){
+        let lastError;
+        for(const endpoint of RPCS){
+          try{
+            const response=await fetch(endpoint,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:method,params:params})});
+            if(!response.ok) throw new Error("RPC HTTP "+response.status);
+            const data=await response.json();
+            if(data.error) throw new Error(data.error.message||"RPC error");
+            return data.result;
+          }catch(error){ lastError=error; }
+        }
+        throw lastError||new Error("RPC unavailable");
+      }
+      function formattedUnits(raw, places){
+        const value=BigInt(raw);
+        const negative=value<0n;
+        const absolute=negative?-value:value;
+        const base=10n**BigInt(places);
+        const whole=(absolute/base).toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+        const fraction=(absolute%base).toString().padStart(places,"0").replace(/0+$/,"").slice(0,4);
+        return (negative?"-":"")+whole+(fraction?"."+fraction:"");
+      }
+      function compactUnits(raw, places){
+        const value=Number(raw)/Math.pow(10,places);
+        if(!Number.isFinite(value)) return "Unavailable";
+        return new Intl.NumberFormat("en-US",{notation:"compact",maximumFractionDigits:2}).format(value);
+      }
+      function usd(value){
+        const n=Number(value);
+        if(!Number.isFinite(n)) return "Not available";
+        if(n>0 && n<0.000001) return "$"+n.toExponential(2);
+        return n.toLocaleString("en-US",{style:"currency",currency:"USD",maximumSignificantDigits:5});
+      }
+      function usdCompact(value){
+        const n=Number(value);
+        if(!Number.isFinite(n)) return "Not available";
+        return n.toLocaleString("en-US",{style:"currency",currency:"USD",notation:"compact",maximumFractionDigits:2});
+      }
+      async function loadTokenInfo(){
+        try{
+          const code=await rpc("eth_getCode",[CONTRACT,"latest"]);
+          if(!code || code==="0x" || code==="0x0"){
+            setText("contractState","No code detected");
+            setText("onchainStatus","No contract code found");
+            setText("totalSupply","Unavailable");
+            return;
+          }
+          setText("contractState","Contract code detected");
+          setText("onchainStatus","Contract code detected");
+          const calls=await Promise.all([
+            rpc("eth_call",[{to:CONTRACT,data:"0x06fdde03"},"latest"]),
+            rpc("eth_call",[{to:CONTRACT,data:"0x95d89b41"},"latest"]),
+            rpc("eth_call",[{to:CONTRACT,data:"0x313ce567"},"latest"]),
+            rpc("eth_call",[{to:CONTRACT,data:"0x18160ddd"},"latest"])
+          ]);
+          const name=decodeAbiString(calls[0]);
+          const symbol=decodeAbiString(calls[1]);
+          if(name) setText("tokenName",name);
+          if(symbol) setText("tokenSymbol",symbol);
+          if(calls[2] && calls[2]!=="0x") decimals=Number(BigInt(calls[2]));
+          setText("tokenDecimals",String(decimals));
+          if(calls[3] && calls[3]!=="0x"){
+            setText("totalSupply",formattedUnits(BigInt(calls[3]),decimals)+" "+(symbol||SYMBOL));
+            setText("supplyMetric",compactUnits(calls[3],decimals));
+          }else{
+            setText("totalSupply","Not exposed by contract");
+          }
+        }catch(error){
+          setText("contractState","On-chain read unavailable");
+          setText("onchainStatus","Read temporarily unavailable");
+          setText("totalSupply","Unavailable");
+        }
+      }
+      async function loadMarketData(){
+        try{
+          const response=await fetch("https://api.dexscreener.com/latest/dex/tokens/"+CONTRACT);
+          if(!response.ok) throw new Error("Market API unavailable");
+          const data=await response.json();
+          const pairs=(data.pairs||[]).filter(p=>p.chainId==="bsc" && p.baseToken && p.baseToken.address.toLowerCase()===CONTRACT.toLowerCase());
+          pairs.sort((a,b)=>Number((b.liquidity&&b.liquidity.usd)||0)-Number((a.liquidity&&a.liquidity.usd)||0));
+          const pair=pairs[0];
+          if(!pair){
+            setText("marketState","No pool data found");
+            setText("tokenPrice","Not listed");
+            setText("poolLiquidity","Not found");
+            setText("volume24h","Not found");
+            setText("priceChange","No tracked pair");
+            setText("liquidityNote","No BNB Chain trading pool for this contract was returned by the market-data provider. The PancakeSwap links are provided as routes only; swaps may not work until a compatible pool with sufficient liquidity exists.");
+            return;
+          }
+          setText("marketState","Market data available");
+          setText("tokenPrice",usd(pair.priceUsd));
+          setText("poolLiquidity",usdCompact(pair.liquidity&&pair.liquidity.usd));
+          setText("volume24h",usdCompact(pair.volume&&pair.volume.h24));
+          const change=Number(pair.priceChange&&pair.priceChange.h24);
+          setText("priceChange",Number.isFinite(change)?(change>0?"+":"")+change.toFixed(2)+"% (24h)":"Pair detected");
+          setText("liquidityNote","A market-data provider returned a BNB Chain pool for DOJ. Pool depth and prices can change quickly; check the live DEX screen before trading.");
+          if(pair.url){
+            $("chartLink").href=pair.url;
+            $("chartLink").textContent="Open this live market pair ↗";
+          }
+        }catch(error){
+          setText("marketState","Market feed unavailable");
+          setText("liquidityNote","Live market data could not be loaded right now. This does not confirm whether a pool exists. Verify liquidity directly on PancakeSwap before trading.");
+        }
+      }
+      async function ensureBsc(){
+        const eth=window.ethereum;
+        let chain=await eth.request({method:"eth_chainId"});
+        if(chain!==CHAIN_ID){
+          try{
+            await eth.request({method:"wallet_switchEthereumChain",params:[{chainId:CHAIN_ID}]});
+          }catch(error){
+            if(error.code===4902){
+              await eth.request({method:"wallet_addEthereumChain",params:[{chainId:CHAIN_ID,chainName:"BNB Smart Chain",nativeCurrency:{name:"BNB",symbol:"BNB",decimals:18},rpcUrls:["https://bsc-dataseed.binance.org/"],blockExplorerUrls:["https://bscscan.com/"]}]});
+            }else{throw error;}
+          }
+        }
+      }
+      async function updateBalance(){
+        if(!walletAccount) return;
+        try{
+          const data="0x70a08231"+hexWord(walletAccount);
+          const raw=await rpc("eth_call",[{to:CONTRACT,data:data},"latest"]);
+          const balance=formattedUnits(BigInt(raw),decimals);
+          setText("walletStatus","Connected · DOJ balance: "+balance);
+        }catch(error){ setText("walletStatus","Connected · "+shortAddress(walletAccount)); }
+      }
+      async function connectWallet(){
+        if(!window.ethereum){
+          toast("No Web3 wallet detected. Open this site in MetaMask or another compatible wallet.");
+          return;
+        }
+        try{
+          const accounts=await window.ethereum.request({method:"eth_requestAccounts"});
+          if(!accounts || !accounts.length) return;
+          walletAccount=accounts[0];
+          await ensureBsc();
+          setText("connectWallet",shortAddress(walletAccount));
+          setText("connectTop",shortAddress(walletAccount));
+          await updateBalance();
+          toast("Wallet connected to BNB Smart Chain.");
+        }catch(error){
+          toast(error&&error.code===4001?"Wallet connection was cancelled.":"Could not connect wallet. Check your wallet network.");
+        }
+      }
+      async function addToken(){
+        if(!window.ethereum){ toast("Open this page in a compatible wallet to add DOJ."); return; }
+        try{
+          await ensureBsc();
+          const result=await window.ethereum.request({method:"wallet_watchAsset",params:{type:"ERC20",options:{address:CONTRACT,symbol:SYMBOL,decimals:decimals,image:"https://token-trusted.github.io/DOJ-TOKEN-ORIGINAL/doj-logo-256x256.png"}}});
+          toast(result?"DOJ token added to wallet.":"Wallet did not add the token.");
+        }catch(error){ toast("Could not add DOJ. Check your wallet and try again."); }
+      }
+      $("copyContract").addEventListener("click",async function(){
+        try{await navigator.clipboard.writeText(CONTRACT);toast("Contract address copied.");}
+        catch(error){toast(CONTRACT);}
+      });
+      $("connectWallet").addEventListener("click",connectWallet);
+      $("connectTop").addEventListener("click",connectWallet);
+      $("addToken").addEventListener("click",addToken);
+      $("menuToggle").addEventListener("click",function(){
+        const open=$("navlinks").classList.toggle("open");
+        this.setAttribute("aria-expanded",String(open));
+        this.textContent=open?"×":"☰";
+      });
+      document.querySelectorAll("#navlinks a").forEach(a=>a.addEventListener("click",()=>{
+        $("navlinks").classList.remove("open");$("menuToggle").setAttribute("aria-expanded","false");$("menuToggle").textContent="☰";
+      }));
+      if(window.ethereum){
+        window.ethereum.on&&window.ethereum.on("accountsChanged",accounts=>{
+          walletAccount=accounts&&accounts.length?accounts[0]:null;
+          if(walletAccount){setText("connectWallet",shortAddress(walletAccount));setText("connectTop",shortAddress(walletAccount));updateBalance();}
+          else{setText("connectWallet","Connect wallet");setText("connectTop","Connect wallet");setText("walletStatus","Wallet not connected");}
+        });
+        window.ethereum.on&&window.ethereum.on("chainChanged",()=>{if(walletAccount) updateBalance();});
+      }
+      setText("year",String(new Date().getFullYear()));
+      setText("contractShort",shortAddress(CONTRACT));
+      loadTokenInfo();
+      loadMarketData();
+    })();
+  </script>
+</body>
 </html>
