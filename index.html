@@ -97,6 +97,20 @@
     .pillar h3{font-size:21px;margin:22px 0 8px}
     .pillar p{color:var(--muted);font-size:12px;line-height:1.8;margin:0}
     .development-note{margin-top:18px;color:#8d887e;font-size:11px;text-align:center}
+
+    .jewellery-gallery{background:linear-gradient(180deg,rgba(255,255,255,.012),rgba(216,184,117,.035),transparent)}
+    .jewel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .jewel-card{position:relative;min-height:300px;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#17191b}
+    .jewel-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease;opacity:.82}
+    .jewel-card:hover img{transform:scale(1.06)}
+    .jewel-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.88))}
+    .jewel-card div{position:absolute;z-index:1;left:20px;right:18px;bottom:18px}
+    .jewel-card h3{font-size:23px;margin:0 0 4px}
+    .jewel-card p{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#e5d8bb;margin:0}
+    .contact-line{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;color:var(--gold2);font-size:12px}
+    .contact-line a{text-decoration:underline;text-underline-offset:4px}
+    @media(max-width:940px){.jewel-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.jewel-grid{grid-template-columns:1fr 1fr;gap:9px}.jewel-card{min-height:225px}.jewel-card div{left:12px;bottom:12px}.jewel-card h3{font-size:17px}.jewel-card p{font-size:8px}}
     .token-section{background:#101214;border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045)}
     .token-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
     .surface{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#191c1f,#121416);padding:30px;box-shadow:var(--shadow)}
@@ -185,6 +199,7 @@
       <nav class="navlinks" id="navlinks" aria-label="Main navigation">
         <a href="#vision">Vision</a>
         <a href="#ecosystem">Ecosystem</a>
+        <a href="#collections">Collections</a>
         <a href="#token">Token</a>
         <a href="#tokenomics">Tokenomics</a>
         <a href="./whitepaper.html">Whitepaper</a>
@@ -208,9 +223,9 @@
           <h1>Connecting the world of <em>fine jewellery.</em></h1>
           <p class="hero-copy">DOJ COIN — Develop of Jewelry — is a digital-asset initiative built around a bigger idea: making jewellery and other valuable decorative goods easier to discover, trade and settle across borders through a more connected digital ecosystem.</p>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#token">Explore DOJ <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-gold" href="#presale">Explore DOJ Pre-sale <span aria-hidden="true">↗</span></a>
             <a class="btn btn-outline" href="./whitepaper.html">Read the Whitepaper <span aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline" href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy on PancakeSwap <span aria-hidden="true">↗</span></a>
+
           </div>
           <p class="hero-note">BNB Smart Chain · BEP-20 token · Contract details available on BscScan</p>
         </div>
@@ -290,6 +305,23 @@
       </div>
     </section>
 
+
+    <section class="jewellery-gallery" id="collections">
+      <div class="wrap">
+        <div class="section-head center">
+          <div class="eyebrow">Discover fine jewellery</div>
+          <h2>A world of precious finds.</h2>
+          <p>Explore the categories at the heart of the DOJ vision — from exceptional emeralds and gemstones to fine jewellery and precious accessories. Product listings and transactions will be introduced as the marketplace develops.</p>
+        </div>
+        <div class="jewel-grid">
+          <article class="jewel-card"><img src="https://images.unsplash.com/photo-1617038220319-b9c5a3a7b4d6?auto=format&fit=crop&w=900&q=85" alt="Luxury gold and gemstone jewellery" loading="lazy"><div><h3>Fine Jewellery</h3><p>Craftsmanship & design</p></div></article>
+          <article class="jewel-card"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=85" alt="Elegant emerald jewellery" loading="lazy"><div><h3>Emeralds</h3><p>Natural green gemstones</p></div></article>
+          <article class="jewel-card"><img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=900&q=85" alt="Diamond ring jewellery" loading="lazy"><div><h3>Diamonds</h3><p>Timeless brilliance</p></div></article>
+          <article class="jewel-card"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85" alt="Luxury gemstone necklace" loading="lazy"><div><h3>Gemstones & Accessories</h3><p>Rare stones & precious details</p></div></article>
+        </div>
+        <div class="contact-line"><span>Explore categories:</span><a href="#get-in-touch">Gold Jewellery</a><a href="#get-in-touch">Precious Stones</a><a href="#get-in-touch">Luxury Accessories</a><a href="#get-in-touch">Wholesale Enquiries</a></div>
+      </div>
+    </section>
     <section class="token-section" id="token">
       <div class="wrap">
         <div class="section-head">
@@ -318,20 +350,20 @@
               <button class="btn btn-quiet btn-small" id="addToken">Add DOJ to wallet</button>
             </div>
           </div>
-          <div class="surface trade-panel">
-            <div class="eyebrow">Trade access</div>
-            <h3>Access the market.</h3>
-            <p>Open the official PancakeSwap interface with the DOJ contract pre-filled. A successful swap also requires a supported liquidity pool, sufficient liquidity and a compatible wallet.</p>
+          <div class="surface trade-panel" id="presale">
+            <div class="eyebrow">DOJ token pre-sale</div>
+            <h3>Early access. Limited-time offer.</h3>
+            <p>Register your interest in the DOJ pre-sale. A promotional 20% discount is planned through 31 December 2026, subject to published sale terms, eligibility and applicable laws.</p>
             <div class="price-card" style="margin-bottom:22px">
-              <div class="eyebrow">Direct decentralised exchange access</div>
-              <p style="font-size:12px;color:var(--muted);line-height:1.8;margin:12px 0 0">Open PancakeSwap with the official DOJ contract pre-filled. Always check the contract address and review the transaction details in your wallet before confirming.</p>
+              <div class="eyebrow">Pre-sale information</div>
+              <p style="font-size:12px;color:var(--muted);line-height:1.8;margin:12px 0 0">The pre-sale payment portal is not yet activated. Contact the project team to receive confirmed pricing, payment instructions, eligibility requirements and sale terms. Do not send funds to an unverified address.</p>
               <a class="chart-link" href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Verify the official token contract on BscScan ↗</a>
             </div>
             <div class="trade-actions">
-              <a class="btn btn-gold" href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Buy DOJ ↗</a>
-              <a class="btn btn-outline" href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E&outputCurrency=BNB" target="_blank" rel="noopener noreferrer">Sell DOJ ↗</a>
+              <a class="btn btn-gold" href="mailto:dojcooperation@gmail.com?subject=DOJ%20Pre-sale%20Enquiry&body=Hello%20DOJ%20team%2C%0A%0AI%20am%20interested%20in%20the%20DOJ%20pre-sale.%0A%0ACountry%3A%0AIntended%20purchase%3A%0A">Request pre-sale access ↗</a>
+              <a class="btn btn-outline" href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Verify token ↗</a>
             </div>
-            <p class="trade-help" id="liquidityNote">A token contract does not itself guarantee that a trading market is available. Verify the transaction route and details before trading.</p>
+            <p class="trade-help" id="liquidityNote">This is an enquiry link, not a payment gateway. No payment is collected on this website at this stage.</p>
             <div class="wallet-row">
               <div class="wallet-balance" id="walletStatus">Wallet not connected</div>
               <button class="btn btn-quiet btn-small" id="connectWallet">Connect wallet</button>
@@ -395,7 +427,7 @@
             <span class="card-index">01 / MERCHANTS</span>
             <h3>Become an early merchant</h3>
             <p>Tell us about your jewellery business, product categories and target markets. We are preparing a controlled merchant pilot.</p>
-            <a class="chart-link" href="mailto:daryakenar.aus@gmail.com?subject=DOJ%20Merchant%20Pilot%20Enquiry&body=Hello%20DOJ%20team%2C%0A%0AI%20am%20interested%20in%20the%20merchant%20pilot.%0A%0ABusiness%20name%3A%0ACountry%3A%0AWebsite%3A%0AProduct%20categories%3A%0AContact%20person%3A%0A">Apply by email ↗</a>
+            <a class="chart-link" href="mailto:dojcooperation@gmail.com?subject=DOJ%20Merchant%20Pilot%20Enquiry&body=Hello%20DOJ%20team%2C%0A%0AI%20am%20interested%20in%20the%20merchant%20pilot.%0A%0ABusiness%20name%3A%0ACountry%3A%0AWebsite%3A%0AProduct%20categories%3A%0AContact%20person%3A%0A">Apply by email ↗</a>
           </article>
           <article class="vision-card">
             <span class="card-index">02 / BUYERS</span>
@@ -410,6 +442,7 @@
             <a class="chart-link" href="mailto:daryakenar.aus@gmail.com?subject=DOJ%20Strategic%20Partnership%20Enquiry&body=Hello%20DOJ%20team%2C%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20partnership.%0A%0AOrganisation%3A%0ACountry%3A%0AService%20area%3A%0AContact%20person%3A%0A">Discuss a partnership ↗</a>
           </article>
         </div>
+        <div class="contact-line"><span>Email:</span><a href="mailto:dojcooperation@gmail.com">dojcooperation@gmail.com</a></div>
         <p class="development-note">These links open an email draft addressed to the DOJ project contact. They do not submit or store information on this website.</p>
       </div>
     </section>
@@ -454,7 +487,6 @@
         <div class="footer-links">
           <a href="./whitepaper.html">Whitepaper</a>
           <a href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">BscScan</a>
-          <a href="https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">PancakeSwap</a>
           <a href="https://t.me/dojcoin_official" target="_blank" rel="noopener noreferrer">Telegram</a>
           <a href="https://github.com/TOKEN-TRUSTED/DOJ-TOKEN-ORIGINAL" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="mailto:daryakenar.aus@gmail.com">Contact</a>
