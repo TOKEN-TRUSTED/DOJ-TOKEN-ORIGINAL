@@ -351,19 +351,33 @@
             </div>
           </div>
           <div class="surface trade-panel" id="presale">
-            <div class="eyebrow">DOJ token pre-sale</div>
-            <h3>Early access. Limited-time offer.</h3>
-            <p>Register your interest in the DOJ pre-sale. A promotional 20% discount is planned through 31 December 2026, subject to published sale terms, eligibility and applicable laws.</p>
+            <div class="eyebrow">DOJ token pre-sale · 20% discount</div>
+            <h3>Secure your pre-sale price.</h3>
+            <p>Pre-sale offer available through 31 December 2026, subject to eligibility and the published sale terms.</p>
             <div class="price-card" style="margin-bottom:22px">
-              <div class="eyebrow">Pre-sale information</div>
-              <p style="font-size:12px;color:var(--muted);line-height:1.8;margin:12px 0 0">The pre-sale payment portal is not yet activated. Contact the project team to receive confirmed pricing, payment instructions, eligibility requirements and sale terms. Do not send funds to an unverified address.</p>
-              <a class="chart-link" href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Verify the official token contract on BscScan ↗</a>
+              <div class="eyebrow">Price per DOJ</div>
+              <div style="margin:14px 0 5px;color:var(--muted);font-size:13px">Original price</div>
+              <div style="font-size:25px;font-weight:700;color:var(--muted);text-decoration:line-through;text-decoration-color:#e53935;text-decoration-thickness:3px">0.0027975 USDT</div>
+              <div style="margin-top:15px;color:var(--muted);font-size:13px">Pre-sale price · 20% OFF</div>
+              <div style="font-size:32px;font-weight:800;color:var(--gold)">0.002238 USDT</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:4px">per 1 DOJ token</div>
+              <div style="margin-top:22px;padding-top:16px;border-top:1px solid var(--line)">
+                <div class="eyebrow">Payment method</div>
+                <p style="margin:8px 0 4px;font-weight:700">USDT · BNB Smart Chain (BEP-20)</p>
+                <p style="font-size:12px;color:var(--muted);line-height:1.7;margin:0">Send USDT only on the BEP-20 network. Do not use ERC-20, TRC-20 or any other network.</p>
+                <div style="font-size:12px;color:var(--muted);margin-top:14px">Official USDT receiving wallet</div>
+                <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px">
+                  <code id="presaleWallet" style="font-size:12px;overflow-wrap:anywhere">0x9459Ce12a4fdceEB3406f6dACc959e582e0a71dc</code>
+                  <button class="btn btn-quiet btn-small" id="copyPresaleWallet" type="button">Copy address</button>
+                </div>
+              </div>
+              <a class="chart-link" href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Verify the DOJ token contract on BscScan ↗</a>
             </div>
             <div class="trade-actions">
-              <a class="btn btn-gold" href="mailto:dojcooperation@gmail.com?subject=DOJ%20Pre-sale%20Enquiry&body=Hello%20DOJ%20team%2C%0A%0AI%20am%20interested%20in%20the%20DOJ%20pre-sale.%0A%0ACountry%3A%0AIntended%20purchase%3A%0A">Request pre-sale access ↗</a>
+              <a class="btn btn-gold" href="mailto:dojcooperation@gmail.com?subject=DOJ%20Pre-sale%20Purchase&body=Hello%20DOJ%20team%2C%0A%0AI%20would%20like%20to%20confirm%20a%20DOJ%20pre-sale%20purchase.%0A%0ADOJ%20quantity%3A%0AUSDT%20amount%3A%0ACountry%3A%0ATransaction%20hash%20(if%20paid)%3A%0A">Contact pre-sale team ↗</a>
               <a class="btn btn-outline" href="https://bscscan.com/token/0x2815978CA263b0E82daEf5b2ba019Cc2FFc6097E" target="_blank" rel="noopener noreferrer">Verify token ↗</a>
             </div>
-            <p class="trade-help" id="liquidityNote">This is an enquiry link, not a payment gateway. No payment is collected on this website at this stage.</p>
+            <p class="trade-help" id="liquidityNote">The displayed wallet accepts USDT on BNB Smart Chain (BEP-20) only. Before transferring funds, contact the project team to confirm your token quantity, payment amount and allocation. Token delivery is not automated by this website.</p>
             <div class="wallet-row">
               <div class="wallet-balance" id="walletStatus">Wallet not connected</div>
               <button class="btn btn-quiet btn-small" id="connectWallet">Connect wallet</button>
@@ -651,6 +665,11 @@
       $("copyContract").addEventListener("click",async function(){
         try{await navigator.clipboard.writeText(CONTRACT);toast("Contract address copied.");}
         catch(error){toast(CONTRACT);}
+      });
+      $("copyPresaleWallet").addEventListener("click",async function(){
+        const address=$("presaleWallet").textContent.trim();
+        try{await navigator.clipboard.writeText(address);toast("USDT BEP-20 wallet address copied.");}
+        catch(error){toast(address);}
       });
       $("connectWallet").addEventListener("click",connectWallet);
       $("connectTop").addEventListener("click",connectWallet);
